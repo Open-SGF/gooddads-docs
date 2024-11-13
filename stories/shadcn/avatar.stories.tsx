@@ -1,28 +1,28 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from '@storybook/react'
 
 import {
-  Avatar,
-  AvatarFallback,
-  AvatarImage,
-} from "../../resources/js/Components/ui"
+	Avatar,
+	AvatarFallback,
+	AvatarImage,
+} from '../../resources/js/Components/ui'
 
 /**
  * An image element with a fallback for representing the user.
  */
 const meta = {
-  title: "shadcn/Avatar",
-  component: Avatar,
-  tags: ["autodocs"],
-  argTypes: {},
-  render: (args) => (
-    <Avatar {...args}>
-      <AvatarImage src="https://github.com/shadcn.png" />
-      <AvatarFallback>CN</AvatarFallback>
-    </Avatar>
-  ),
-  parameters: {
-    layout: "centered",
-  },
+	title: 'shadcn/Avatar',
+	component: Avatar,
+	tags: ['autodocs'],
+	argTypes: {},
+	render: (args) => (
+		<Avatar {...args}>
+			<AvatarImage src='https://github.com/shadcn.png' />
+			<AvatarFallback>CN</AvatarFallback>
+		</Avatar>
+	),
+	parameters: {
+		layout: 'centered',
+	},
 } satisfies Meta<typeof Avatar>
 
 export default meta

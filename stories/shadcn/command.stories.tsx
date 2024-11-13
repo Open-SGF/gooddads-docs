@@ -1,48 +1,48 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { CommandSeparator } from "cmdk"
+import type { Meta, StoryObj } from '@storybook/react'
+import { CommandSeparator } from 'cmdk'
 
 import {
-  Command,
-  CommandEmpty,
-  CommandGroup,
-  CommandInput,
-  CommandItem,
-  CommandList,
-} from "../../resources/js/Components/ui"
+	Command,
+	CommandEmpty,
+	CommandGroup,
+	CommandInput,
+	CommandItem,
+	CommandList,
+} from '../../resources/js/Components/ui'
 
 /**
  * Fast, composable, unstyled command menu for React.
  */
 const meta = {
-  title: "shadcn/Command",
-  component: Command,
-  tags: ["autodocs"],
-  argTypes: {},
-  args: {
-    className: "rounded-lg w-96 border shadow-md",
-  },
-  render: (args) => (
-    <Command {...args}>
-      <CommandInput placeholder="Type a command or search..." />
-      <CommandList>
-        <CommandEmpty>No results found.</CommandEmpty>
-        <CommandGroup heading="Suggestions">
-          <CommandItem>Calendar</CommandItem>
-          <CommandItem>Search Emoji</CommandItem>
-          <CommandItem>Calculator</CommandItem>
-        </CommandGroup>
-        <CommandSeparator />
-        <CommandGroup heading="Settings">
-          <CommandItem>Profile</CommandItem>
-          <CommandItem>Billing</CommandItem>
-          <CommandItem>Settings</CommandItem>
-        </CommandGroup>
-      </CommandList>
-    </Command>
-  ),
-  parameters: {
-    layout: "centered",
-  },
+	title: 'shadcn/Command',
+	component: Command,
+	tags: ['autodocs'],
+	argTypes: {},
+	args: {
+		className: 'rounded-lg w-96 border shadow-md',
+	},
+	render: (args) => (
+		<Command {...args}>
+			<CommandInput placeholder='Type a command or search...' />
+			<CommandList>
+				<CommandEmpty>No results found.</CommandEmpty>
+				<CommandGroup heading='Suggestions'>
+					<CommandItem>Calendar</CommandItem>
+					<CommandItem>Search Emoji</CommandItem>
+					<CommandItem>Calculator</CommandItem>
+				</CommandGroup>
+				<CommandSeparator />
+				<CommandGroup heading='Settings'>
+					<CommandItem>Profile</CommandItem>
+					<CommandItem>Billing</CommandItem>
+					<CommandItem>Settings</CommandItem>
+				</CommandGroup>
+			</CommandList>
+		</Command>
+	),
+	parameters: {
+		layout: 'centered',
+	},
 } satisfies Meta<typeof Command>
 
 export default meta

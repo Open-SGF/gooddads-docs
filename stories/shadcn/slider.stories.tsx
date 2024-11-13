@@ -1,20 +1,20 @@
-import type { Meta, StoryObj } from "@storybook/react"
+import type { Meta, StoryObj } from '@storybook/react'
 
-import { Slider } from "../../resources/js/Components/ui"
+import { Slider } from '../../resources/js/Components/ui'
 
 /**
  * An input where the user selects a value from within a given range.
  */
 const meta = {
-  title: "shadcn/Slider",
-  component: Slider,
-  tags: ["autodocs"],
-  argTypes: {},
-  args: {
-    defaultValue: [33],
-    max: 100,
-    step: 1,
-  },
+	title: 'shadcn/Slider',
+	component: Slider,
+	tags: ['autodocs'],
+	argTypes: {},
+	args: {
+		defaultValue: [33],
+		max: 100,
+		step: 1,
+	},
 } satisfies Meta<typeof Slider>
 
 export default meta
@@ -30,16 +30,16 @@ export const Default: Story = {}
  * Use the `inverted` prop to have the slider fill from right to left.
  */
 export const Inverted: Story = {
-  args: {
-    inverted: true,
-  },
+	args: {
+		inverted: true,
+	},
 }
 
 /**
  * Use the `disabled` prop to disable the slider.
  */
 export const Disabled: Story = {
-  args: {
-    disabled: true,
-  },
+	args: {
+		disabled: true,
+	},
 }

@@ -1,0 +1,14 @@
+{
+  "experimentalTernaries": true,
+  "printWidth": 80,
+  "useTabs": true,
+  "singleQuote": true,
+  "quoteProps": "as-needed",
+  "jsxSingleQuote": true,
+  "trailingComma": "all",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "jsxBracketSameLine": false,
+  "arrowParens": "always",
+  "semi": false
+}

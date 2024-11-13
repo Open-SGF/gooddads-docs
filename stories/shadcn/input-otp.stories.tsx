@@ -1,42 +1,42 @@
-import type { Meta, StoryObj } from "@storybook/react"
-import { REGEXP_ONLY_DIGITS_AND_CHARS } from "input-otp"
+import type { Meta, StoryObj } from '@storybook/react'
+import { REGEXP_ONLY_DIGITS_AND_CHARS } from 'input-otp'
 
 import {
-  InputOTP,
-  InputOTPGroup,
-  InputOTPSeparator,
-  InputOTPSlot,
-} from "../../resources/js/Components/ui"
+	InputOTP,
+	InputOTPGroup,
+	InputOTPSeparator,
+	InputOTPSlot,
+} from '../../resources/js/Components/ui'
 
 /**
  * Accessible one-time password component with copy paste functionality.
  */
 const meta = {
-  title: "shadcn/InputOTP",
-  component: InputOTP,
-  tags: ["autodocs"],
-  argTypes: {},
-  args: {
-    maxLength: 6,
-    pattern: REGEXP_ONLY_DIGITS_AND_CHARS,
-    children: null,
-  },
+	title: 'shadcn/InputOTP',
+	component: InputOTP,
+	tags: ['autodocs'],
+	argTypes: {},
+	args: {
+		maxLength: 6,
+		pattern: REGEXP_ONLY_DIGITS_AND_CHARS,
+		children: null,
+	},
 
-  render: (args) => (
-    <InputOTP {...args} render={undefined}>
-      <InputOTPGroup>
-        <InputOTPSlot index={0} />
-        <InputOTPSlot index={1} />
-        <InputOTPSlot index={2} />
-        <InputOTPSlot index={3} />
-        <InputOTPSlot index={4} />
-        <InputOTPSlot index={5} />
-      </InputOTPGroup>
-    </InputOTP>
-  ),
-  parameters: {
-    layout: "centered",
-  },
+	render: (args) => (
+		<InputOTP {...args} render={undefined}>
+			<InputOTPGroup>
+				<InputOTPSlot index={0} />
+				<InputOTPSlot index={1} />
+				<InputOTPSlot index={2} />
+				<InputOTPSlot index={3} />
+				<InputOTPSlot index={4} />
+				<InputOTPSlot index={5} />
+			</InputOTPGroup>
+		</InputOTP>
+	),
+	parameters: {
+		layout: 'centered',
+	},
 } satisfies Meta<typeof InputOTP>
 
 export default meta
@@ -52,19 +52,19 @@ export const Default: Story = {}
  * Use multiple groups to separate the input slots.
  */
 export const SeparatedGroup: Story = {
-  render: (args) => (
-    <InputOTP {...args} render={undefined}>
-      <InputOTPGroup>
-        <InputOTPSlot index={0} />
-        <InputOTPSlot index={1} />
-        <InputOTPSlot index={2} />
-      </InputOTPGroup>
-      <InputOTPSeparator />
-      <InputOTPGroup>
-        <InputOTPSlot index={3} />
-        <InputOTPSlot index={4} />
-        <InputOTPSlot index={5} />
-      </InputOTPGroup>
-    </InputOTP>
-  ),
+	render: (args) => (
+		<InputOTP {...args} render={undefined}>
+			<InputOTPGroup>
+				<InputOTPSlot index={0} />
+				<InputOTPSlot index={1} />
+				<InputOTPSlot index={2} />
+			</InputOTPGroup>
+			<InputOTPSeparator />
+			<InputOTPGroup>
+				<InputOTPSlot index={3} />
+				<InputOTPSlot index={4} />
+				<InputOTPSlot index={5} />
+			</InputOTPGroup>
+		</InputOTP>
+	),
 }

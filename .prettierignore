@@ -1,0 +1,10 @@
+build
+coverage
+docs
+package-lock.json
+composer.lock
+node_modules
+.env
+vendor
+public
+.git
