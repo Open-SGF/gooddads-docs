@@ -11,10 +11,10 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('responsible_party_assignments', static function (Blueprint $table) {
+        Schema::create('participant_staff_assignments', static function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->foreignUuid('responsible_party_id')->constrained('responsible_parties');
-            $table->foreignUuid('participant_id')->constrained('participants');
+            $table->foreignUuid('staff_user_id')->references('id')->on('users');
+            $table->foreignUuid('participant_user_id')->references('id')->on('users');
             $table->timestamps();
         });
     }
@@ -24,6 +24,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('responsible_party_assignments');
+        Schema::dropIfExists('participant_staff_assignments');
     }
 };

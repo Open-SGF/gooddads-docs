@@ -3,13 +3,13 @@
 namespace Database\Factories;
 
 use App\Models\Participant;
-use App\Models\ResponsibleParty;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 /**
- * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ResponsiblePartyAssignment>
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\ParticipantStaffAssignment>
  */
-class ResponsiblePartyAssignmentFactory extends Factory
+class ParticipantStaffAssignmentFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -20,8 +20,9 @@ class ResponsiblePartyAssignmentFactory extends Factory
     {
         return [
             'id' => $this->faker->uuid(),
-            'responsible_party_id' => ResponsibleParty::factory(),
-            'participant_id' => Participant::factory(),
+            'staff_user_id' => User::factory(),
+            'participant_user_id' => User::factory()->has(Participant::factory()),
         ];
     }
+
 }

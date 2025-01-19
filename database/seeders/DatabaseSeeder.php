@@ -19,7 +19,6 @@ class DatabaseSeeder extends Seeder
             UserSeeder::class,
             RegionSeeder::class,
             ProgramSeeder::class,
-            ResponsiblePartySeeder::class,
 
             ParticipantSeeder::class,
             ParticipantClassSeeder::class,
@@ -28,7 +27,7 @@ class DatabaseSeeder extends Seeder
             QuizSeeder::class,
             ProgramAssignmentSeeder::class,
             ParticipantClassAssignmentSeeder::class,
-            ResponsiblePartyAssignmentSeeder::class,
+            ParticipantStaffAssignmentSeeder::class,
 
             QuizQuestionSeeder::class,
             QuizQuestionOptionSeeder::class,
